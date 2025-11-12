@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snake Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>Snake</h1>
+      <div class="scoreboard">
+        <div>Score: <span id="score">0</span></div>
+        <div>High: <span id="highScore">0</span></div>
+      </div>
+    </header>
+    <main class="main">
+      <canvas id="gameCanvas" width="420" height="420" aria-label="Snake game area"></canvas>
+      <div class="controls">
+        <button id="startBtn" class="btn">Start</button>
+        <button id="pauseBtn" class="btn">Pause</button>
+        <button id="resetBtn" class="btn btn-secondary">Reset</button>
+        <label class="speedLabel">
+          Speed
+          <select id="speedSelect">
+            <option value="200">Slow</option>
+            <option value="130" selected>Normal</option>
+            <option value="90">Fast</option>
+            <option value="60">Insane</option>
+          </select>
+        </label>
+      </div>
+      <div class="dpad" aria-label="Touch controls">
+        <div class="row">
+          <button class="dpad-btn" data-dir="up" aria-label="Up">▲</button>
+        </div>
+        <div class="row">
+          <button class="dpad-btn" data-dir="left" aria-label="Left">◀</button>
+          <button class="dpad-btn" data-dir="right" aria-label="Right">▶</button>
+        </div>
+        <div class="row">
+          <button class="dpad-btn" data-dir="down" aria-label="Down">▼</button>
+        </div>
+      </div>
+      <p class="hint">Use Arrow or WASD keys. Swipe on the canvas or tap the buttons on mobile.</p>
+    </main>
+    <footer class="footer">
+      <small>Built with Canvas & vanilla JS.</small>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
